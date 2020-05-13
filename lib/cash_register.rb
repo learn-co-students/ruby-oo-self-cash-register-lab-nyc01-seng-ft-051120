@@ -9,14 +9,14 @@ attr_accessor :total, :discount, :quantity
 
     end
 def add_item(title, price, quantity=1)
-    @total +=price*quantity
+    self.total +=price*quantity
     @last_price=price*quantity
    quantity.times do @title.push(title) end
    
     
 end
     def apply_discount
-    @total=@total-@total/100*@discount
+    self.total=@total-@total/100*@discount
     if discount==0
     "There is no discount to apply."
     else 
@@ -27,7 +27,7 @@ end
         @title
     end
     def void_last_transaction
-        @total -= @last_price
+        self.total -= @last_price
         @title.pop()
         #binding.pry
     end
