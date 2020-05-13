@@ -30,3 +30,4 @@ class CashRegister
     end
 end
 
+## got some help via google to work through the last half (apply discount)
